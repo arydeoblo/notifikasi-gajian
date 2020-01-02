@@ -12,6 +12,8 @@ class BcaBank implements BankInterface {
 
 		$req_file = require Yii::getAlias($file_balance);
 
+		$limit = Yii::$app->params['notification']['limit'];
+
 		$get_data = $req_file[$person];
 
 		$prev_balance = $get_data['balance'];
@@ -51,7 +53,7 @@ class BcaBank implements BankInterface {
 			}
 
 			//Kirim notif jika selisih lebih dari 15000
-			if (($diff_balance >= 15000)) {
+			if (($diff_balance > $limit) && $last_balance != 0) {
 				return ['type' => $type, 'prev_balance' => $prev_balance_format, 'last_balance' => $last_balance_format, 'diff_balance' => $diff_balance_format];
 			}
 
