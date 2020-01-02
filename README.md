@@ -5,7 +5,7 @@
 2. Seting SMTP server "confg/console.php" (apabila menggunakan notifikasi by email)
 3. Tambahkan cron job di server anda  "* *     * * *   root    php /your/yii2-notifikasi-saldo-path/yii bca/check user".
 
-# update 02/01/2020
+**update 02/01/2020**
 1. Update versi Yii2
 2. Telegram Notification (Bot)
 3. Email Notification (On Progress)
