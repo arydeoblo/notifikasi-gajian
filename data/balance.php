@@ -4,6 +4,6 @@ return [
         'email' => '',
         'username' => '',
         'password' => '',
-        'balance' => false,
+        'balance' => '',
     ],
 ];

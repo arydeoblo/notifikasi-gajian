@@ -23,19 +23,14 @@ class BcaParser
         $this->post_time['start']['d'] = date('d', $start);
     }
     
-    
-    
-    
     function curlexec()
     {
         curl_setopt($this->ch, CURLOPT_RETURNTRANSFER, 1);
-	curl_setopt($this->ch, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($this->ch, CURLOPT_SSL_VERIFYHOST, 0);
         return curl_exec($this->ch);
     }
     
-    
-    
-    
+
     function login($username, $password)
     {
         
@@ -68,9 +63,6 @@ class BcaParser
         
     }
     
-    
-    
-    
     function logout()
     {
         curl_setopt($this->ch, CURLOPT_URL, 'https://m.klikbca.com/authentication.do?value(actions)=logout');
@@ -79,12 +71,9 @@ class BcaParser
         return curl_close($this->ch);
     }
     
-    
-    
-    
     function getBalance($username,$password)
     {
-	$this->login($username,$password);
+	   $this->login($username,$password);
 
         
         curl_setopt($this->ch, CURLOPT_URL, 'https://m.klikbca.com/accountstmt.do?value(actions)=menu');
@@ -109,14 +98,11 @@ class BcaParser
         
         $parse = str_replace(',', '', $parse[0]);
 
-	$this->logout();        
+	   $this->logout();        
 
         return (is_numeric($parse)) ? $parse : false;
         
     }
-    
-    
-    
     
     function getTransactions()
     {

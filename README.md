@@ -1,8 +1,14 @@
 # yii2-saldo-notifier
 
 1. Buka file "data/balance.php" dan sesuaikan dengan akun anda.
-2. Seting SMTP server confg/web.php 
+2. Buka file "config/notification.php" dan sesuaikan type notifikasi
+2. Seting SMTP server confg/web.php (apabila menggunakan notifikasi by email)
 3. Tambahkan cron job di server anda  "* *     * * *   root    php /your/yii2-notifikasi-saldo-path/yii bca/check user".
+
+# update 02/01/2020
+1. Update versi Yii2
+2. Telegram Notification (Bot)
+3. Email Notification (On Progress)
 
 **NOTE:**
 - Terkadang Server BCA merespon saldo dengan hasil 0 - rate limit
