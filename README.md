@@ -10,6 +10,7 @@
 2. Telegram Notification (Bot)
 3. Email Notification (On Progress)
 4. Fix zero result
+5. Added limit balance notification
 
 **NOTE:**
 - Notifikasi akan dikirim apabila ada perubahan melebihi seting limit di file "config/notification.php"
