@@ -2,7 +2,7 @@
 
 1. Buka file "data/balance.php" dan sesuaikan dengan akun anda.
 2. Buka file "config/notification.php", sesuaikan limit dan type notifikasi
-2. Seting SMTP server confg/console.php (apabila menggunakan notifikasi by email)
+2. Seting SMTP server "confg/console.php" (apabila menggunakan notifikasi by email)
 3. Tambahkan cron job di server anda  "* *     * * *   root    php /your/yii2-notifikasi-saldo-path/yii bca/check user".
 
 # update 02/01/2020
