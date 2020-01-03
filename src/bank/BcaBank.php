@@ -41,7 +41,7 @@ class BcaBank implements BankInterface {
 
 			if ($last_balance < $prev_balance) {
 				$diff_balance = round(($prev_balance - $last_balance));
-				$type = 'reduce';
+				$type = 'decrease';
 			}
 
 			if ($last_balance < $prev_balance || $last_balance > $prev_balance) {
