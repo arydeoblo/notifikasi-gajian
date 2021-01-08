@@ -12,8 +12,6 @@ class BcaBank implements BankInterface {
 
 		$req_file = require Yii::getAlias($file_balance);
 
-		$limit = Yii::$app->params['notification']['limit'];
-
 		$get_data = $req_file[$person];
 
 		$prev_balance = $get_data['balance'];
