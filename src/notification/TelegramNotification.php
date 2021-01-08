@@ -16,10 +16,10 @@ class TelegramNotification implements NotificationInterface {
 		$date = $date = date('d/M/Y H:i:s');
 
 		if($type == 'decrease'){
-			$title = "Berkurang - Saldo Rekening BCA";
+			$title = "Berkurang - Rekening BCA";
 			$sub_title = "Berkurang";
 		}else{
-			$title = "Bertambah - Saldo Rekening BCA";
+			$title = "Bertambah - Rekening BCA";
 			$sub_title = "Bertambah";
 		}
 
@@ -28,6 +28,7 @@ class TelegramNotification implements NotificationInterface {
 		$message .= "Waktu : {$date}" . $new_line_char;
 		$message .= "Saldo Awal : Rp. {$prev_balance}" . $new_line_char;
 		$message .= "Saldo {$sub_title}: Rp. {$diff_balance}" . $new_line_char;
+		$message .= "-----------------------------------------" . $new_line_char . $new_line_char;
 		$message .= "Saldo Akhir : Rp. {$last_balance}";
 		
 		file_get_contents($api_url . $telegram['bot_key'] . "/sendMessage?chat_id=" . $telegram['chat_id'] . "&text=" . $message);

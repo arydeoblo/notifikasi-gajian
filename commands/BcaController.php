@@ -18,11 +18,10 @@ class BcaController extends Controller {
          	return ExitCode::UNAVAILABLE;
 		}
 
-
 		$bank = new BcaBank();
 		$checkBalance = $bank->checkBalance($person);
 
-		if($checkBalance != false){
+		if($checkBalance != false && $checkBalance != 0){
 			$notifier = new $notification['class'];
 			$notifier->sendNotification($checkBalance['type'], $checkBalance['prev_balance'], $checkBalance['last_balance'], $checkBalance['diff_balance']);
 
